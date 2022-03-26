@@ -56,15 +56,20 @@ biting_repository.save(biting_3)
 biting_4 = Biting(human_4, zombie_2)
 biting_repository.save(biting_4)
 
-# bitings = biting_repository.select_all()
-# for biting in bitings:
-#     print(biting.__dict__)
+bitings = biting_repository.select_all()
+for biting in bitings:
+    print(biting.__dict__)
 
 # biting = biting_repository.select(biting_1.id)
 # print(biting.__dict__)
 
-bitings = biting_repository.select_all()
-for biting in bitings:
-    print(biting.__dict__)
+# biting_repository.delete(biting_1.id)
+
+# biting_1.member_id = 2
+# biting_repository.update(biting_1)
+
+# bitings = biting_repository.select_all()
+# for biting in bitings:
+#     print(biting.__dict__)
 
 pdb.set_trace()
