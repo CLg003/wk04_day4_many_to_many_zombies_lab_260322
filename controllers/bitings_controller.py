@@ -12,7 +12,9 @@ def bitings():
     return render_template('bitings/index.html', bitings=bitings)
 
 # NEW
-
+@bitings_blueprint.route('/bitings/new')
+def new():
+    return render_template('bitings/new.html')
 
 # CREATE
 
