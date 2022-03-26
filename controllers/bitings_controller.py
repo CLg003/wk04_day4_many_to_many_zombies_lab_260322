@@ -31,8 +31,13 @@ def create_biting():
     biting_repository.save(new_biting)
     return redirect('/bitings')
 
-
 # EDIT
+@bitings_blueprint.route('/bitings/<id>/edit')
+def edit_biting(id):
+    biting = biting_repository.select(id)
+    humans = human_repository.select_all()
+    zombies = zombie_repository.select_all()
+    return render_template('bitings/edit.html', biting=biting, humans=humans, zombies=zombies)
 
 # UPDATE
 
